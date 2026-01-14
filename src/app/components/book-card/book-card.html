@@ -1,0 +1,58 @@
+@if(book) {
+    <div class="book-container">
+
+        <!-- Poster -->
+        <div class="poster">
+            <!-- <img [src]="'https://covers.openlibrary.org/b/id/' + book.cover_id + '-M.jpg'" alt="{{book.title}}"> -->
+            <img 
+            *ngIf="book?.covers?.length"
+            [src]="'https://covers.openlibrary.org/b/id/' + book!.covers![0] + '-L.jpg'"
+            alt="{{ book?.title }}"
+            >
+ 
+        </div>
+
+        <!-- Détails -->
+        <div class="details">
+            <h1 class="book-title">
+                {{book.title}}
+            </h1>
+
+            <!-- <button (click)="addToWishList(movie)" [disabled]="buttonDisabled">
+                Add to my wishlist
+            </button>
+
+            <button (click)="addToWatchLater(movie)" [disabled]="buttonDisabled">
+                Watch later
+            </button> -->
+            <div class="buttons">
+                <button 
+                (click)="addToWishList(book)" 
+                [disabled]="buttonStates[book.key]?.wishList">
+                Add to my WishwList
+            </button>
+
+            <button 
+                (click)="addToLuList(book)" 
+                [disabled]="buttonStates[book.key]?.luList">
+                Add to my ReadList
+            </button>
+
+            </div>
+            
+
+            <div class="info">
+                <p><span>Original title:</span> {{book.title}}</p>
+                <p><span>Edition count:</span> {{book.edition_count ?? 0 | number}}</p>
+                <p><span>Release year:</span> {{book.first_publish_year ?? 'Unknown'}}</p>
+            </div>
+
+            <div class="overview">
+                <h2>Description</h2>
+                <p>{{book.description}}</p>
+            </div>
+        </div>
+        
+    </div>
+}
+

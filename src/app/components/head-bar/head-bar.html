@@ -1,8 +1,8 @@
 <div class="container-fluid ss">
-    <h1>hello</h1>
+    <h1>Welcome to BookStore</h1>
     <div class="buttons">
-    <button > Wish List</button>
-    <button > Warch Later</button>
+    <button (click)="navigateToWishList()"> <fa-icon [icon]="faHeart" [ngStyle]="setHeartStyle()"></fa-icon>Wish List#{{bookService.wishList.length}}</button>
+    <button (click)="navigateToLuList()"> Read List#{{bookService.LuList.length}}</button>
 </div>
 </div>
 <div class="plus">

@@ -1,0 +1,122 @@
+/* Container principal */
+.book-container {
+    display: flex;
+    gap: 60px;
+    padding: 60px 80px;
+    background-color:#efebe1;
+    min-height: calc(100vh - 300px);
+}
+
+/* Poster */
+.poster {
+    flex: 0 0 320px;
+}
+
+.poster img {
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+    background-color:#606454;
+}
+
+/* Details section */
+/* Details section reste inchangé */
+.details {
+    flex: 1;
+    background-color: #D0CCC1;
+    border-radius: 16px;
+    padding: 40px 50px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+/* Description text */
+.overview p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: rgb(121, 97, 66);
+    text-align: justify; /* 🔹 JUSTIFICATION du texte */
+    text-justify: inter-word; /* 🔹 espace entre les mots uniforme */
+    margin-bottom: 0;
+    max-width: 100%; /* s’étend sur toute la largeur */
+}
+
+
+/* Title */
+.book-title {
+    font-family: "Pacifico", cursive;
+    font-size: 48px;
+    font-weight: 400;
+    color: rgb(121, 97, 66);
+    margin-bottom: 30px;
+}
+
+/* Buttons */
+.buttons {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 35px;
+}
+
+.buttons button {
+    padding: 12px 26px;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    border-radius: 6px;
+    border: 1px solid #606454;
+    background-color: transparent;
+    color: #606454;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Hover */
+.buttons button:hover:not(:disabled) {
+    background-color: #606454;
+    color: #E4E3E2;
+}
+
+/* Disabled */
+.buttons button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Info */
+.info {
+    margin-bottom: 30px;
+}
+
+.info p {
+    font-size: 15px;
+    color: rgb(121, 97, 66);
+    margin: 8px 0;
+}
+
+.info span {
+    font-weight: 600;
+    color: #606454;
+}
+
+/* Overview */
+/* Overview */
+.overview {
+    border-top: 1px solid rgba(96, 100, 84, 0.4);
+    padding-top: 25px;
+    flex-grow: 1; /* permet à la description de remplir l'espace vertical */
+}
+
+.overview h2 {
+    font-family: "Pacifico", cursive;
+    font-size: 28px;
+    font-weight: 400;
+    color: #606454;
+    margin-bottom: 15px;
+}
+
+

@@ -65,3 +65,10 @@
 .search:focus-within {
     border-color: rgb(121, 97, 66);
 }
+.plus{
+    height: 2px;
+    background-color: #D0CCC1;
+    margin: 0;        /* IMPORTANT */
+    padding: 0;
+
+}

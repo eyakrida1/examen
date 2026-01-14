@@ -1,0 +1,21 @@
+<div class="movie-list">
+    @for (book of bookService.wishList; track book.key) {
+    <div class="movie-card" (click)="navigateTo(book.key.replace('/works/', ''))">
+        <div>
+            <img
+[src]="book.covers?.[0]
+        ? 'https://covers.openlibrary.org/b/id/' + book!.covers![0] + '-L.jpg'
+        : (book.cover_id
+           ? 'https://covers.openlibrary.org/b/id/' + book.cover_id + '-L.jpg'
+           : 'assets/no-cover.png')"
+alt="{{ book?.title }}"
+>
+        </div>
+        <div class="movie-details">
+            <h2>
+                {{book.title}}
+            </h2>
+        </div>
+    </div> 
+    }
+</div>

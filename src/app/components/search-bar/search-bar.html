@@ -1,10 +1,23 @@
-<div class="search-container">
+<!-- <div class="search-container">
     <div class="search">
-        <input type="text" placeholder="Search...">
+        <input type="text" #search (input)="updateBookList(search.value)" placeholder="Search...">
         <button>
             <fa-icon [icon]="faMagnifyingGlass" />
         </button>
     </div>
     
 </div>
+<div class="plus">
 
+</div> -->
+<div class="search-container">
+    <div class="search">
+        <input type="text" #search (input)="updateBookListSingleInput(search.value)"
+               placeholder="Search by title or year...">
+        <button (click)="updateBookListSingleInput(search.value)">
+            <fa-icon [icon]="faMagnifyingGlass"></fa-icon>
+        </button>
+    </div>
+</div>
+
+<div class="plus"></div>

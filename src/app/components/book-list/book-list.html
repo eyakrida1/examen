@@ -1,0 +1,18 @@
+<div class="book-list">
+    @for (book of bookService.bookList; track book.key) {
+        <div class="book-card" (click)="navigateTo(book.key.replace('/works/', ''))">
+            <img 
+                [src]="'https://covers.openlibrary.org/b/id/' + book.cover_id + '-M.jpg'"
+                alt="{{ book.title }}"
+            />
+
+            <h3 class="movie-title">
+                {{ book.title }}
+                @if (isInWishList(book.key)) {
+                    <fa-icon [icon]="faHeart" class="favorite-icon"></fa-icon>
+                }
+            </h3>
+
+        </div>
+    }
+</div>

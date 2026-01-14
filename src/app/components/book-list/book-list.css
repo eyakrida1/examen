@@ -1,0 +1,53 @@
+.book-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 30px;
+    padding: 40px 60px;
+    background-color: #606454;
+}
+
+/* Card */
+.book-card {
+    background-color: #D0CCC1;
+    border-radius: 10px;
+    padding: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* Hover effect */
+.book-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Book cover */
+.book-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    background-color: #E4E3E2;
+}
+
+/* Title */
+.book-card h3 {
+    font-family: "Pacifico", cursive;
+    font-size: 18px;
+    font-weight: 400;
+    color: rgb(121, 97, 66);
+    margin: 0;
+    line-height: 1.3;
+    position: relative;
+}
+
+/* Heart icon */
+.favorite-icon {
+    color: rgb(254, 68, 0);
+    margin-left: 8px;
+    font-size: 14px;
+    vertical-align: middle;
+}

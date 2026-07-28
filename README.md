@@ -1,6 +1,7 @@
 # Project
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.13.
+This is a BookStore website using api 'https://openlibrary.org/subjects/computers.json'
 
 ## Development server
 
